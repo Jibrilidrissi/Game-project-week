@@ -1,22 +1,32 @@
-* {
-    animation: fade-up 0.5s;
-}
-
 body {
-    margin: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-image:url('../images/begin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+} 
+
+button {
+    background-color: #36f090;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 250px;
+    cursor: pointer;
 }
 
-.inlog {
-    background: rgb(173, 173, 173);
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    width: 500px;
-    margin-left: 500px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.13);
-    margin-top: 250px;
+button:hover {
+  background-color: #e0e0e0;
+  ;
 }

@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image:url('../images/achtergrond.jpg');
+    background-size: 100%;
+}
+#stick {
+    position: absolute;
+    top: 521px;
+    left: 50px;
+}
