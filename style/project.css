@@ -5,11 +5,15 @@
 }
 
 body {
-    background-image:url('../images/achtergrond.jpg');
+    background-image:url('../images/achtergrond.png');
     background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
-#stick {
+#img {
     position: absolute;
-    top: 521px;
+    top: 551px;
     left: 50px;
 }
