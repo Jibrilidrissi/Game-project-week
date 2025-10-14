@@ -12,7 +12,13 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+
 #img {
+    top: 551px;
+    left: 50px;
+}
+
+#steen {
     position: absolute;
     top: 551px;
     left: 50px;
