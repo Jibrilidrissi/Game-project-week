@@ -1,15 +1,23 @@
 const character = document.getElementById("character");
 const enemy = document.getElementById("enemy");
 
-// Enemy beweegt naar links
+// startpositie enemy (moet numeriek zijn)
+let enemyX = 1200;
+enemy.style.left = enemyX + "px";
+
+// beweeg enemy automatisch naar links
 setInterval(() => {
-  enemy.style.left = (parseInt(enemy.style.left) - 1) + "px";
-}, 10);
+  enemyX -= 10; // snelheid aanpassen hier
+  if (enemyX < -150) {
+    enemyX = 1200; // reset als hij buiten beeld is
+  }
+  enemy.style.left = enemyX + "px";
+}, 20);
 
 let isJumping = false;
-let jumpHeight = 120; // hoe hoog
+let jumpHeight = 190; // hoe hoog
 let jumpSpeed = 5;    // kleiner is sneller
-let gravity = 5;      // hoe snel het valt
+let gravity = 4;      // hoe snel het valt
 let groundY = 541;    // Grond positie
 
 document.addEventListener('keydown', event => {
@@ -27,7 +35,7 @@ function jump() {
     if (position <= groundY - jumpHeight) {
       clearInterval(upInterval);
 
-      // fall down
+      // zwaartekracht
       let downInterval = setInterval(() => {
         if (position >= groundY) {
           clearInterval(downInterval);
