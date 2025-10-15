@@ -1,4 +1,4 @@
-setInterval(()=>img.style.left=(parseInt(img.style.left)+1)+'px',10);
+setInterval(()=>enemy.style.left=(parseInt(enemy.style.left)-1)+'px',10);
 
 const stick = document.getElementById("stick");
 console.log(img)
@@ -15,4 +15,3 @@ function moveimg(key)
   }
 
 }
-

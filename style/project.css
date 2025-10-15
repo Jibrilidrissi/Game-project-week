@@ -14,12 +14,16 @@ body {
 }
 
 #img {
+    width: 150px;
+    height: 150px;
     top: 551px;
-    left: 50px;
+    left: 3050px;
 }
 
-#steen {
-    position: absolute;
+#enemy {
     top: 551px;
-    left: 50px;
+    left: 3050px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
 }
