@@ -53,3 +53,17 @@ function jump() {
     }
   }, jumpSpeed);
 }
+
+let score = 0;
+const scoreboard= document.getElementById("scoreboard");
+if (x + width < 0) {
+    x = canvas.width;
+    score += 1; // Score verhogen
+  }
+function increaseScore(amount= +1){
+ score + amount;
+ updateScoreboard();  
+}
+function updateScoreboard(){
+  scoreboard.textContent = "Score: " + score;
+}
