@@ -5,10 +5,10 @@
 - Creatief visualiseren
 ### Jibril
 - Hands on development
-- Mockup
+- documentatie
 ### Finn
 - Wireframe
-- Trelloboard
+- Hands on development
 ### Ilhan
 - Trelloboard
 
