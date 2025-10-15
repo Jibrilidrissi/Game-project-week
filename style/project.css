@@ -1,25 +1,30 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-image:url('../images/achtergrond.png');
-    background-size: 100%;
+    background-image: url('../images/achtergrond.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    overflow: hidden;
 }
 
-#img {
-    top: 551px;
-    left: 50px;
-}
-
-#steen {
+#character {
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 551px;
-    left: 50px;
+    top: 541px;
+    left: 100px;
+}
+
+#enemy {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 561px;
+    left: 1200px;
 }

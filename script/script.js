@@ -1,18 +1,55 @@
-setInterval(()=>img.style.left=(parseInt(img.style.left)+1)+'px',10);
+const character = document.getElementById("character");
+const enemy = document.getElementById("enemy");
 
-const stick = document.getElementById("stick");
-console.log(img)
+// startpositie enemy (moet numeriek zijn)
+let enemyX = 1200;
+enemy.style.left = enemyX + "px";
+
+// beweeg enemy automatisch naar links
+setInterval(() => {
+  enemyX -= 10; // snelheid aanpassen hier
+  if (enemyX < -150) {
+    enemyX = 1200; // reset als hij buiten beeld is
+  }
+  enemy.style.left = enemyX + "px";
+}, 20);
+
+let isJumping = false;
+let jumpHeight = 190; // hoe hoog
+let jumpSpeed = 5;    // kleiner is sneller
+let gravity = 4;      // hoe snel het valt
+let groundY = 541;    // Grond positie
+
 document.addEventListener('keydown', event => {
-  moveimg(event.key)
+  if (event.key === "w" || event.key === "W") {
+    jump();
+  }
 });
 
-function moveimg(key) 
-{
-  if ((key == "w" || key == "W")) 
-  {
-    img.style.top = (parseInt(img.style.top) - 10) + "px";
-    console.log("UP")
-  }
+function jump() {
+  if (isJumping) return; // geen double jumps
+  isJumping = true;
 
+  let position = groundY;
+  let upInterval = setInterval(() => {
+    if (position <= groundY - jumpHeight) {
+      clearInterval(upInterval);
+
+      // zwaartekracht
+      let downInterval = setInterval(() => {
+        if (position >= groundY) {
+          clearInterval(downInterval);
+          isJumping = false;
+          position = groundY;
+          character.style.top = position + "px";
+        } else {
+          position += gravity;
+          character.style.top = position + "px";
+        }
+      }, jumpSpeed);
+    } else {
+      position -= gravity;
+      character.style.top = position + "px";
+    }
+  }, jumpSpeed);
 }
-
