@@ -13,17 +13,18 @@ body {
     height: 100vh;
 }
 
-#img {
+#character{
     width: 150px;
     height: 150px;
-    top: 551px;
-    left: 3050px;
+    position: relative;
+    top: 541px;
+    left: 100px;
 }
 
 #enemy {
-    top: 551px;
-    left: 3050px;
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 150px;
+    top: 561px;
+    left: 1200px;
 }
