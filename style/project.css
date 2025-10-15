@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image:url('../images/achtergrond.png');
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#img {
+    top: 551px;
+    left: 50px;
+}
+
+#steen {
+    position: absolute;
+    top: 551px;
+    left: 50px;
+}

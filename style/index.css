@@ -1,11 +1,29 @@
-* {
-    animation: fade-up 0.5s;
-}
-
 body {
-    margin: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-image:url('../images/begin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+} 
+
+button {
+    background-color: #36f090;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 250px;
+    cursor: pointer;
 }
 
 .inlog {
