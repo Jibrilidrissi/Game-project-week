@@ -7,9 +7,9 @@ enemy.style.left = enemyX + "px";
 
 // beweeg enemy automatisch naar links
 setInterval(() => {
-  enemyX -= 10; // snelheid aanpassen hier
+  enemyX -= 15; // snelheid aanpassen hier
   if (enemyX < -150) {
-    enemyX = 1200; // reset als hij buiten beeld is
+    enemyX = 1900; // reset als hij buiten beeld is
   }
   enemy.style.left = enemyX + "px";
 }, 20);
