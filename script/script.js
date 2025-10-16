@@ -79,10 +79,9 @@ let score = 0;
 function updateScoreboard() {
   scoreboard.textContent = "Score: " + score;
 }
-
-function gameLoop() {
-  score += 1; 
+setInterval(() => {
+  score +=1;  
   updateScoreboard();
-  requestAnimationFrame(gameLoop); 
-}
-gameLoop();
+}, 100);
+
+ 
