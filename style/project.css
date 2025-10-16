@@ -62,15 +62,9 @@ body {
         border:10px solid black;
         box-shadow: 10px 5px 5px rgb(14, 60, 241);
         border-radius:5dvi;
-<<<<<<< HEAD
 
     }
    
-=======
-        
-}
-
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
 #restartButton {
   position: fixed;          
   left: 50%;               

@@ -1,7 +1,7 @@
 const character = document.getElementById("character");
 const enemy = document.getElementById("enemy");
 const enemy1 = document.getElementById("enemy1");
-const scoreboard = document.getElementById("scoreboard");
+
 
 // startpositie enemy 
 let enemyX = 1900;
@@ -73,7 +73,6 @@ function jump() {
   }, jumpSpeed);
 }
 
-<<<<<<< HEAD
 
 
  let score = 0;
@@ -81,14 +80,9 @@ function jump() {
 
 const scoreboard = document.getElementById("scoreboard"); 
 
-=======
-// score systeem
-let score = 0;
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
 function updateScoreboard() {
   scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
 }
-<<<<<<< HEAD
   setInterval(() => {
     score +=1;
     if (score >highscore){
@@ -100,25 +94,3 @@ updateScoreboard();
 
 
  
-=======
-setInterval(() => {
-  score += 1;
-  updateScoreboard();
-}, 50);
-
-// 💥 eenvoudige botsingsdetectie (collision detection)
-function checkCollision() {
-  const charRect = character.getBoundingClientRect();
-  const enemy1Rect = enemy1.getBoundingClientRect();
-
-  if (
-    charRect.left < enemy1Rect.right &&
-    charRect.right > enemy1Rect.left &&
-    charRect.top < enemy1Rect.bottom &&
-    charRect.bottom > enemy1Rect.top
-  ) {
-    alert("💥 Game Over!");
-    location.reload(); // restart game after alert
-  }
-}
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
