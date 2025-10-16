@@ -59,13 +59,3 @@ button:hover {
   top: 601px;
   left: 1300px;
 }
-
-#scoreboard {
-  text-align: left;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: xx-large;
-  height: auto;
-margin: 10%;
-  border: rlh solid rgb(0, 0, 0);
-  border-radius: 2px;
-}

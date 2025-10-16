@@ -5,47 +5,35 @@
 }
 
 body {
-    background-color: rgb(0, 234, 255);
-    background-image: linear-gradient(to bottom, rgb(0, 183, 255), rgb(255, 255, 255));
-    height: 100vh;
-    overflow: hidden;
-}
-
-#container {
-    height: 648px;
-    margin: auto;
-    margin-top: 50px;
-    width: 1152px;
     background-image: url('../images/achtergrond.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 15px;
-    border: solid 5px;
-    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+    height: 100vh;
+    overflow: hidden;
 }
 
 #character {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 511px;
-    left: 301px;
+    top: 541px;
+    left: 100px;
 }
 
 #enemy {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 571px;
+    top: 601px;
     left: 1200px;
 }
 
 #enemy1 {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 571px;
+    top: 601px;
     left: 1300px;
 }
 #scoreboard {
