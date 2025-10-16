@@ -83,10 +83,6 @@ function updateScoreboard() {
 function gameLoop() {
   score += 1; 
   updateScoreboard();
-
-  
-
   requestAnimationFrame(gameLoop); 
 }
-
 gameLoop();
