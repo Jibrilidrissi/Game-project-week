@@ -1,29 +1,29 @@
 body {
 
-    font-family: Arial, sans-serif;
-    display: flex;
-    background-image:url('../images/begin.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-image: url('../images/begin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 
-} 
+}
 
 button {
-    background-color: #36f090;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-    margin-top: 250px;
-    cursor: pointer;
+  background-color: #36f090;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 250px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -31,6 +31,31 @@ button:hover {
   ;
 }
 
-#scoreboard{
+#scoreboard {
   color: white;
+}
+
+
+#character {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 521px;
+  left: 200px;
+}
+
+#enemy {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 601px;
+  left: 1000px;
+}
+
+#enemy1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 601px;
+  left: 1300px;
 }

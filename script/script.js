@@ -79,9 +79,10 @@ let score = 0;
 function updateScoreboard() {
   scoreboard.textContent = "Score: " + score;
 }
-setInterval(() => {
-  score +=1;  
+
+function gameLoop() {
+  score += 1;
   updateScoreboard();
-}, 50);
+}, 100;
 
  
