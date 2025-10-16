@@ -73,34 +73,11 @@ function jump() {
   }, jumpSpeed);
 }
 
-<<<<<<< HEAD
-
-
- let score = 0;
- let highscore = localStorage.getItem("Highscore") || 0;
-
-const scoreboard = document.getElementById("scoreboard"); 
-
-=======
 // score systeem
 let score = 0;
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
 function updateScoreboard() {
   scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
 }
-<<<<<<< HEAD
-  setInterval(() => {
-    score +=1;
-    if (score >highscore){
-      higscore = score;
-      localStorage.getItem("Highscore", highscore)
-    }
-updateScoreboard();
-}, 50);
-
-
- 
-=======
 setInterval(() => {
   score += 1;
   updateScoreboard();
@@ -121,4 +98,3 @@ function checkCollision() {
     location.reload(); // restart game after alert
   }
 }
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502

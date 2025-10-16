@@ -49,47 +49,20 @@ body {
     top: 621px;
     left: 1300px;
 }
+
 #scoreboard {
-  
+
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
     height: auto;
-        align-items: center;
-        margin: auto;
-        margin-top:15px;
-        width: 250px;
-        border:10px solid black;
-        box-shadow: 10px 5px 5px rgb(14, 60, 241);
-        border-radius:5dvi;
-<<<<<<< HEAD
+    align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    width: 250px;
+    border: 10px solid black;
+    box-shadow: 10px 5px 5px rgb(14, 60, 241);
+    border-radius: 5dvi;
 
-    }
-   
-=======
-        
 }
 
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
-#restartButton {
-  position: fixed;          
-  left: 50%;               
-  bottom: 300px;             
-  transform: translateX(-50%); 
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: green;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-
-  display: none;
-<<<<<<< HEAD
-}
-
-
-
-=======
-}
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
