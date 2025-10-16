@@ -1,18 +1,32 @@
 const character = document.getElementById("character");
 const enemy = document.getElementById("enemy");
 
-// startpositie enemy (moet numeriek zijn)
-let enemyX = 1200;
+// startpositie enemy 
+let enemyX = 1900;
 enemy.style.left = enemyX + "px";
 
 // beweeg enemy automatisch naar links
 setInterval(() => {
-  enemyX -= 10; // snelheid aanpassen hier
+  enemyX -= 15; // snelheid aanpassen hier
   if (enemyX < -150) {
-    enemyX = 1200; // reset als hij buiten beeld is
+    enemyX = 1900; // reset als hij buiten beeld is
   }
   enemy.style.left = enemyX + "px";
 }, 20);
+
+// startpositie enemy1
+let enemy1X = 2500;
+enemy1.style.left = enemy1X + "px";
+
+// beweeg enemy1 automatisch naar links
+setInterval(() => {
+  enemy1X -= 10; // snelheid aanpassen hier
+  if (enemy1X < -150) {
+    enemy1X = 2500; // reset als hij buiten beeld is
+  }
+  enemy1.style.left = enemy1X + "px";
+}, 20);
+
 
 let isJumping = false;
 let jumpHeight = 190; // hoe hoog
@@ -52,4 +66,18 @@ function jump() {
       character.style.top = position + "px";
     }
   }, jumpSpeed);
+}
+
+let score = 0;
+const scoreboard = document.getElementById("scoreboard");
+if (x + width < 0) {
+  x = canvas.width;
+  score += 1; // Score verhogen
+}
+function increaseScore(amount = +1) {
+  score + amount;
+  updateScoreboard();
+}
+function updateScoreboard() {
+  scoreboard.textContent = "Score: " + score;
 }
