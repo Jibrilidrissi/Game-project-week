@@ -25,6 +25,11 @@ document.addEventListener('keydown', event => {
     jump();
   }
 });
+document.addEventListener('keydown', event => {
+  if (event.key === "PgUp" || event.key === "Pg Up") {
+    jump();
+  }
+});
 
 function jump() {
   if (isJumping) return; // geen double jumps
