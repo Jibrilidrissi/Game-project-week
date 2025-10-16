@@ -32,7 +32,7 @@ let isJumping = false;
 let jumpHeight = 190; // hoe hoog
 let jumpSpeed = 5;    // kleiner is sneller
 let gravity = 4;      // hoe snel het valt
-let groundY = 511;    // Grond positie
+let groundY = 571;    // Grond positie
 
 document.addEventListener('keydown', event => {
   if (event.key === "w" || event.key === "W") {
