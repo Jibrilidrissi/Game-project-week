@@ -82,6 +82,6 @@ function updateScoreboard() {
 setInterval(() => {
   score +=1;  
   updateScoreboard();
-}, 100);
+}, 50);
 
  
