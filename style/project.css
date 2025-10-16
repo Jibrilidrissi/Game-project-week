@@ -5,35 +5,47 @@
 }
 
 body {
-    background-image: url('../images/achtergrond.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: rgb(0, 234, 255);
+    background-image: linear-gradient(to bottom, rgb(0, 183, 255), rgb(255, 255, 255));
     height: 100vh;
     overflow: hidden;
 }
 
+#container {
+    height: 648px;
+    margin: auto;
+    margin-top: 50px;
+    width: 1152px;
+    background-image: url('../images/achtergrond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    border: solid 5px;
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+
 #character {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     position: absolute;
-    top: 541px;
-    left: 100px;
+    top: 511px;
+    left: 301px;
 }
 
 #enemy {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: 601px;
+    top: 571px;
     left: 1200px;
 }
 
 #enemy1 {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: 601px;
+    top: 571px;
     left: 1300px;
 }
 #scoreboard {

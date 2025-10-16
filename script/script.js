@@ -7,9 +7,9 @@ enemy.style.left = enemyX + "px";
 
 // beweeg enemy automatisch naar links
 setInterval(() => {
-  enemyX -= 15; // snelheid aanpassen hier
-  if (enemyX < -150) {
-    enemyX = 1900; // reset als hij buiten beeld is
+  enemyX -= 12; // snelheid aanpassen hier
+  if (enemyX < 90) {
+    enemyX = 1700; // reset als hij buiten beeld is
   }
   enemy.style.left = enemyX + "px";
 }, 20);
@@ -21,8 +21,8 @@ enemy1.style.left = enemy1X + "px";
 // beweeg enemy1 automatisch naar links
 setInterval(() => {
   enemy1X -= 10; // snelheid aanpassen hier
-  if (enemy1X < -150) {
-    enemy1X = 2500; // reset als hij buiten beeld is
+  if (enemy1X < 50) {
+    enemy1X = 1500; // reset als hij buiten beeld is
   }
   enemy1.style.left = enemy1X + "px";
 }, 20);
@@ -32,7 +32,7 @@ let isJumping = false;
 let jumpHeight = 190; // hoe hoog
 let jumpSpeed = 5;    // kleiner is sneller
 let gravity = 4;      // hoe snel het valt
-let groundY = 541;    // Grond positie
+let groundY = 511;    // Grond positie
 
 document.addEventListener('keydown', event => {
   if (event.key === "w" || event.key === "W") {
