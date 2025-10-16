@@ -37,5 +37,14 @@ body {
     left: 1300px;
 }
 #scoreboard {
-    
+        text-align: center;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size:xx-large;
+        height: auto;
+        align-items: center;
+        
+        width: 500px;
+        border:1rlh solid black;
+        border-radius:5dvi;
+        
 }
