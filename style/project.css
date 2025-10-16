@@ -62,3 +62,16 @@ body {
         border-radius:5dvi;
         
 }
+#highscore {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    height: auto;
+        align-items: center;
+        margin: auto;
+        margin-top:15px;
+        width: 250px;
+        border:10px solid black;
+        box-shadow: 10px 5px 5px rgb(14, 60, 241);
+        border-radius:5dvi;
+}

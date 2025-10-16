@@ -74,16 +74,23 @@ function jump() {
 }
 
 
-let score = 0;
+
+ let score = 0;
+ let highscore = localStorage.getItem("Highscore") || 0;
+
 const scoreboard = document.getElementById("scoreboard"); 
 
 function updateScoreboard() {
-  scoreboard.textContent = "Score: " + score;
+  scoreboard.textContent = `Score: ${score}  Highscore: ${highscore}`;
 }
   setInterval(() => {
     score +=1;
+    if (score >highscore){
+      higscore = score;
+      localStorage.getItem("Highscore", highscore)
+    }
 updateScoreboard();
 }, 50);
-  
-  
+
+
  
