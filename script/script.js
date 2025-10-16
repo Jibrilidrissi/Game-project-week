@@ -73,16 +73,17 @@ function jump() {
   }, jumpSpeed);
 }
 
-const scoreboard = document.getElementById("scoreboard"); // HTML element voor score
+
 let score = 0;
+const scoreboard = document.getElementById("scoreboard"); 
 
 function updateScoreboard() {
   scoreboard.textContent = "Score: " + score;
 }
-
-function gameLoop() {
-  score += 1;
-  updateScoreboard();
-}, 100;
-
+  setInterval(() => {
+    score +=1;
+updateScoreboard();
+}, 50);
+  
+  
  
