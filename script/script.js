@@ -73,6 +73,7 @@ function jump() {
   }, jumpSpeed);
 }
 
+<<<<<<< HEAD
 
 
  let score = 0;
@@ -94,3 +95,30 @@ updateScoreboard();
 
 
  
+=======
+// score systeem
+let score = 0;
+function updateScoreboard() {
+  scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
+}
+setInterval(() => {
+  score += 1;
+  updateScoreboard();
+}, 50);
+
+// 💥 eenvoudige botsingsdetectie (collision detection)
+function checkCollision() {
+  const charRect = character.getBoundingClientRect();
+  const enemy1Rect = enemy1.getBoundingClientRect();
+
+  if (
+    charRect.left < enemy1Rect.right &&
+    charRect.right > enemy1Rect.left &&
+    charRect.top < enemy1Rect.bottom &&
+    charRect.bottom > enemy1Rect.top
+  ) {
+    alert("💥 Game Over!");
+    location.reload(); // restart game after alert
+  }
+}
+>>>>>>> cf932060444def3bacf586ad78599d218fcc2521
