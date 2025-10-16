@@ -85,5 +85,27 @@ function updateScoreboard() {
 updateScoreboard();
 }, 50);
   
-  
- 
+function speelOpnieuw() {
+  player.x = 50;
+  player.y =240;
+  player.dy = 0;
+  player.grounded = true;
+
+  obstacles = [];
+  frame = 0;
+  alive = true;
+
+  document.getElementById("restartButton").style.display = "none";
+
+  loop();
+}
+
+function loop() {
+  if (!alive) {
+    document.getElementById("restartButton").style.display = "block";
+    return;
+  }
+
+  requestAnimationFrame(loop);
+}
+
