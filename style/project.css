@@ -28,3 +28,11 @@ body {
     top: 601px;
     left: 1200px;
 }
+
+#enemy1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 601px;
+    left: 1300px;
+}
