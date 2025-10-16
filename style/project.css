@@ -5,52 +5,52 @@
 }
 
 body {
-    background-image: url('../images/achtergrond.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: rgb(0, 234, 255);
+    background-image: linear-gradient(to bottom, rgb(0, 183, 255), rgb(255, 255, 255));
     height: 100vh;
     overflow: hidden;
 }
 
+#container {
+    height: 648px;
+    margin: auto;
+    margin-top: 50px;
+    width: 1152px;
+    background-image: url('../images/achtergrond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    border: solid 5px;
+    overflow: hidden;
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+
 #character {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     position: absolute;
-    top: 541px;
-    left: 100px;
+    top: 571px;
+    left: 301px;
 }
 
 #enemy {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: 601px;
+    top: 621px;
     left: 1200px;
 }
 
 #enemy1 {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: 601px;
+    top: 621px;
     left: 1300px;
 }
 #scoreboard {
-        text-align: center;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size:xx-large;
-        height: auto;
-        align-items: center;
-        margin: auto;
-        margin-top:15px;
-        width: 250px;
-        border:10px solid black;
-        box-shadow: 10px 5px 5px rgb(14, 60, 241);
-        border-radius:5dvi;
-        
-}
-#highscore {
+  
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
@@ -62,4 +62,24 @@ body {
         border:10px solid black;
         box-shadow: 10px 5px 5px rgb(14, 60, 241);
         border-radius:5dvi;
+
+    }
+   
+#restartButton {
+  position: fixed;          
+  left: 50%;               
+  bottom: 300px;             
+  transform: translateX(-50%); 
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: none;
 }
+
+
+

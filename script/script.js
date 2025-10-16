@@ -21,7 +21,7 @@ enemy1.style.left = enemy1X + "px";
 // beweeg enemy1 automatisch naar links
 setInterval(() => {
   enemy1X -= 10; // snelheid aanpassen hier
-  if (enemy1X < 50) {
+  if (enemy1X < 100) {
     enemy1X = 1500; // reset als hij buiten beeld is
   }
   enemy1.style.left = enemy1X + "px";
@@ -81,7 +81,7 @@ function jump() {
 const scoreboard = document.getElementById("scoreboard"); 
 
 function updateScoreboard() {
-  scoreboard.textContent = `Score: ${score}  Highscore: ${highscore}`;
+  scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
 }
   setInterval(() => {
     score +=1;
