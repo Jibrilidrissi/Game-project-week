@@ -56,7 +56,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
     height: auto;
-<<<<<<< HEAD
+
         align-items: center;
         margin: auto;
         margin-top:15px;
@@ -81,23 +81,9 @@ body {
   cursor: pointer;
 
   display: none;
-<<<<<<< HEAD
 }
 
 
 
-=======
-}
->>>>>>> 2e6d408e802df92766bc4af65fb1ac6096da1502
-=======
-    align-items: center;
-    margin: auto;
-    margin-top: 15px;
-    width: 250px;
-    border: 10px solid black;
-    box-shadow: 10px 5px 5px rgb(14, 60, 241);
-    border-radius: 5dvi;
 
-}
-
->>>>>>> cf932060444def3bacf586ad78599d218fcc2521
+   

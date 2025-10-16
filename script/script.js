@@ -73,7 +73,7 @@ function jump() {
   }, jumpSpeed);
 }
 
-<<<<<<< HEAD
+
 
 
  let score = 0;
@@ -95,16 +95,9 @@ updateScoreboard();
 
 
  
-=======
-// score systeem
-let score = 0;
-function updateScoreboard() {
-  scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
-}
-setInterval(() => {
-  score += 1;
-  updateScoreboard();
-}, 50);
+
+
+
 
 // 💥 eenvoudige botsingsdetectie (collision detection)
 function checkCollision() {
@@ -121,4 +114,4 @@ function checkCollision() {
     location.reload(); // restart game after alert
   }
 }
->>>>>>> cf932060444def3bacf586ad78599d218fcc2521
+
