@@ -54,9 +54,11 @@ body {
         font-size:xx-large;
         height: auto;
         align-items: center;
-        
-        width: 500px;
-        border:1rlh solid black;
+        margin: auto;
+        margin-top:15px;
+        width: 250px;
+        border:10px solid black;
+        box-shadow: 10px 5px 5px rgb(14, 60, 241);
         border-radius:5dvi;
         
 }
