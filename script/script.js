@@ -14,7 +14,11 @@ setInterval(() => {
     enemyX = 1700;
   }
   enemy.style.left = enemyX + "px";
+
+  checkCollision();
 }, 20);
+
+
 
 // startpositie enemy1
 let enemy1X = 2500;
@@ -28,7 +32,7 @@ setInterval(() => {
   }
   enemy1.style.left = enemy1X + "px";
 
-  // 🔥 check collision here every frame
+  // check collision here every frame
   checkCollision();
 }, 20);
 
@@ -36,8 +40,8 @@ setInterval(() => {
 let isJumping = false;
 let jumpHeight = 190;
 let jumpSpeed = 5;
-let gravity = 4;
-let groundY = 571;
+let gravity = 3;
+let groundY = 599;
 
 document.addEventListener('keydown', event => {
   if (event.key === "w" || event.key === "W" || event.key === "PageUp") {
@@ -73,9 +77,7 @@ function jump() {
   }, jumpSpeed);
 }
 
-
-
-
+// Highscore
  let score = 0;
  let highscore = localStorage.getItem("Highscore") || 0;
 
@@ -94,12 +96,24 @@ updateScoreboard();
 }, 50);
 
 
- 
+// eenvoudige botsingsdetectie enemy (collision detection)
+function checkCollision() {
+  const charRect = character.getBoundingClientRect();
+  const enemyRect = enemy.getBoundingClientRect();
+
+  if (
+    charRect.left < enemyRect.right &&
+    charRect.right > enemyRect.left &&
+    charRect.top < enemyRect.bottom &&
+    charRect.bottom > enemyRect.top
+  ) {
+    alert("💥 Game Over!");
+    location.reload(); // restart game after alert
+  }
+}
 
 
-
-
-// 💥 eenvoudige botsingsdetectie (collision detection)
+// eenvoudige botsingsdetectie enemy1 (collision detection)
 function checkCollision() {
   const charRect = character.getBoundingClientRect();
   const enemy1Rect = enemy1.getBoundingClientRect();

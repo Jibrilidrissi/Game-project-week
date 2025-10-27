@@ -27,10 +27,10 @@ body {
 }
 
 #character {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 571px;
+    top: 599px;
     left: 301px;
 }
 
@@ -38,15 +38,15 @@ body {
     width: 80px;
     height: 80px;
     position: absolute;
-    top: 621px;
+    top: 641px;
     left: 1200px;
 }
 
 #enemy1 {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 65px;
     position: absolute;
-    top: 621px;
+    top: 651px;
     left: 1300px;
 }
 
