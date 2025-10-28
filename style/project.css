@@ -53,8 +53,8 @@ body {
 #scoreboard {
 
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size:xx-large;
     height: auto;
 
         align-items: center;
@@ -62,7 +62,7 @@ body {
         margin-top:15px;
         width: 250px;
         border:10px solid black;
-        box-shadow: 10px 5px 5px rgb(14, 60, 241);
+        box-shadow: 10px 5px 5px rgb(10, 58, 203);
         border-radius:5dvi;
 
     }

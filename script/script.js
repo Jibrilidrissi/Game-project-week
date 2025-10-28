@@ -93,13 +93,6 @@ function updateScoreboard() {
 updateScoreboard();
 }, 50);
 
-
- 
-
-
-
-
-// 💥 eenvoudige botsingsdetectie (collision detection)
 function checkCollision() {
   const charRect = character.getBoundingClientRect();
   const enemy1Rect = enemy1.getBoundingClientRect();
@@ -114,4 +107,3 @@ function checkCollision() {
     location.reload(); // restart game after alert
   }
 }
-
