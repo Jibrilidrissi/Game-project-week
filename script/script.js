@@ -18,6 +18,7 @@ setInterval(() => {
   checkCollision();
 }, 20);
 
+// Enemy setup
 let enemy1X = 2500;
 enemy1.style.left = enemy1X + "px";
 
@@ -30,14 +31,16 @@ setInterval(() => {
   checkCollision();
 }, 20);
 
-let enemy2x = 1600;
-enemy2.style.left = enemy2x + "px";
+// Enemy setup
+let enemy2X = 3000;
+enemy2.style.left = enemy2X + "px";
+
 setInterval(() => {
   enemy2X -= 14;
-  if (enemy2X < -70) {
-    enemy2X = 20;
+  if (enemy2X < -700) {
+    enemy2X = 1500;
   }
-  enemy2.style.left = enemy2 + "px";
+  enemy2.style.left = enemy2X + "px";
   checkCollision();
 }, 20);
 
@@ -105,6 +108,7 @@ function checkCollision() {
   const charRect = character.getBoundingClientRect();
   const enemyRect = enemy.getBoundingClientRect();
   const enemy1Rect = enemy1.getBoundingClientRect();
+  const enemy2Rect = enemy2.getBoundingClientRect();
 
   // Collision with enemy
   if (
@@ -125,7 +129,18 @@ function checkCollision() {
   ) {
     gameOver();
   }
+
+  // Collision with enemy2
+  if (
+    charRect.left < enemy2Rect.right &&
+    charRect.right > enemy2Rect.left &&
+    charRect.top < enemy2Rect.bottom &&
+    charRect.bottom > enemy2Rect.top
+  ) {
+    gameOver();
+  }
 }
+
 
 function gameOver() {
   alert("💥 Game Over!");
@@ -138,6 +153,8 @@ function resetGame() {
   enemy.style.left = enemyX + "px";
   enemy1X = 2500;
   enemy1.style.left = enemy1X + "px";
+  enemy2X = 3000;
+  enemy2.style.left = enemy2X + "px";
 
   // Optionally reset score
   score = 0;
