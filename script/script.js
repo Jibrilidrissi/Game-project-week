@@ -87,13 +87,7 @@ setInterval(() => {
   updateScoreboard();
 }, 50);
 
-
- 
-
-
-
-
-// 💥 eenvoudige botsingsdetectie (collision detection)
+// Collision detection 
 function checkCollision() {
   const charRect = character.getBoundingClientRect();
   const enemyRect = enemy.getBoundingClientRect();
@@ -116,8 +110,23 @@ function checkCollision() {
     charRect.top < enemy1Rect.bottom &&
     charRect.bottom > enemy1Rect.top
   ) {
-    alert("💥 Game Over!");
-    location.reload(); // restart game after alert
+    gameOver();
   }
 }
 
+function gameOver() {
+  alert("💥 Game Over!");
+  resetGame();
+}
+
+function resetGame() {
+  // Reset enemy positions
+  enemyX = 1900;
+  enemy.style.left = enemyX + "px";
+  enemy1X = 2500;
+  enemy1.style.left = enemy1X + "px";
+
+  // Optionally reset score
+  score = 0;
+  updateScoreboard();
+}
