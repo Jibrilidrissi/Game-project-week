@@ -59,3 +59,11 @@ button:hover {
   top: 601px;
   left: 1300px;
 }
+
+#enemy2 {
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  top: 450px;
+  left: 1600px;
+}
