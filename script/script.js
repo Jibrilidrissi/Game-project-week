@@ -30,12 +30,14 @@ setInterval(() => {
   checkCollision();
 }, 20);
 
+let enemy2x = 1600;
+enemy2.style.left = enemy2x + "px";
 setInterval(() => {
   enemy2X -= 14;
-  if (enemy2X < -700) {
+  if (enemy2X < -70) {
     enemy2X = 20;
   }
-  enemy2.style.left = enemy2X + "px";
+  enemy2.style.left = enemy2 + "px";
   checkCollision();
 }, 20);
 
