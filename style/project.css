@@ -12,6 +12,7 @@ body {
 }
 
 #container {
+    position: relative;
     height: 648px;
     margin: auto;
     margin-top: 50px;
@@ -27,26 +28,26 @@ body {
 }
 
 #character {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 571px;
-    left: 301px;
+    top: 449px;
+    left: 101px;
 }
 
 #enemy {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    top: 621px;
+    top: 499px;
     left: 1200px;
 }
 
 #enemy1 {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 65px;
     position: absolute;
-    top: 621px;
+    top: 499px;
     left: 1300px;
 }
 
@@ -62,28 +63,23 @@ body {
         margin-top:15px;
         width: 250px;
         border:10px solid black;
-        box-shadow: 10px 5px 5px rgb(10, 58, 203);
+        box-shadow: 10px 5px 5px rgb(14, 60, 241);
         border-radius:5dvi;
 
-    }
-   
-#restartButton {
-  position: fixed;          
-  left: 50%;               
-  bottom: 300px;             
-  transform: translateX(-50%); 
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: green;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-
-  display: none;
 }
 
+#restartButton {
+    position: fixed;
+    left: 50%;
+    bottom: 300px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 
-
-
-   
+    display: none;
+}

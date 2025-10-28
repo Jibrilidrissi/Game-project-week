@@ -1,45 +1,42 @@
+// Elements
 const character = document.getElementById("character");
 const enemy = document.getElementById("enemy");
 const enemy1 = document.getElementById("enemy1");
+const scoreboard = document.getElementById("scoreboard");
 
-
-// startpositie enemy 
+// Enemy setup
 let enemyX = 1900;
 enemy.style.left = enemyX + "px";
 
-// beweeg enemy automatisch naar links
 setInterval(() => {
-  enemyX -= 12;
-  if (enemyX < 90) {
+  enemyX -= 14;
+  if (enemyX < -300) {
     enemyX = 1700;
   }
   enemy.style.left = enemyX + "px";
-}, 20);
-
-// startpositie enemy1
-let enemy1X = 2500;
-enemy1.style.left = enemy1X + "px";
-
-// beweeg enemy1 automatisch naar links
-setInterval(() => {
-  enemy1X -= 10;
-  if (enemy1X < 100) {
-    enemy1X = 1500;
-  }
-  enemy1.style.left = enemy1X + "px";
-
-  // 🔥 check collision here every frame
   checkCollision();
 }, 20);
 
-// jump variables
+let enemy1X = 2500;
+enemy1.style.left = enemy1X + "px";
+
+setInterval(() => {
+  enemy1X -= 12;
+  if (enemy1X < -500) {
+    enemy1X = 1500;
+  }
+  enemy1.style.left = enemy1X + "px";
+  checkCollision();
+}, 20);
+
+// Jump logic
 let isJumping = false;
 let jumpHeight = 190;
 let jumpSpeed = 5;
-let gravity = 4;
-let groundY = 571;
+let gravity = 3;
+let groundY = 459;
 
-document.addEventListener('keydown', event => {
+document.addEventListener("keydown", event => {
   if (event.key === "w" || event.key === "W" || event.key === "PageUp") {
     jump();
   }
@@ -54,7 +51,7 @@ function jump() {
     if (position <= groundY - jumpHeight) {
       clearInterval(upInterval);
 
-      // vallen
+      // Falling down
       let downInterval = setInterval(() => {
         if (position >= groundY) {
           clearInterval(downInterval);
@@ -73,30 +70,46 @@ function jump() {
   }, jumpSpeed);
 }
 
-
-
-
- let score = 0;
- let highscore = localStorage.getItem("Highscore") || 0;
-
-const scoreboard = document.getElementById("scoreboard"); 
+// Score + Highscore
+let score = 0;
+let highscore = localStorage.getItem("Highscore") || 0;
 
 function updateScoreboard() {
   scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
 }
-  setInterval(() => {
-    score +=1;
-    if (score >highscore){
-      higscore = score;
-      localStorage.getItem("Highscore", highscore)
-    }
-updateScoreboard();
+
+setInterval(() => {
+  score += 1;
+  if (score > highscore) {
+    highscore = score;
+    localStorage.setItem("Highscore", highscore);
+  }
+  updateScoreboard();
 }, 50);
 
+
+ 
+
+
+
+
+// 💥 eenvoudige botsingsdetectie (collision detection)
 function checkCollision() {
   const charRect = character.getBoundingClientRect();
+  const enemyRect = enemy.getBoundingClientRect();
   const enemy1Rect = enemy1.getBoundingClientRect();
 
+  // Collision with enemy
+  if (
+    charRect.left < enemyRect.right &&
+    charRect.right > enemyRect.left &&
+    charRect.top < enemyRect.bottom &&
+    charRect.bottom > enemyRect.top
+  ) {
+    gameOver();
+  }
+
+  // Collision with enemy1
   if (
     charRect.left < enemy1Rect.right &&
     charRect.right > enemy1Rect.left &&
@@ -107,3 +120,4 @@ function checkCollision() {
     location.reload(); // restart game after alert
   }
 }
+
