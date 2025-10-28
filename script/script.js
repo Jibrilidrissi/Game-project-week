@@ -30,8 +30,8 @@ setInterval(() => {
   checkCollision();
 }, 20);
 
-let enemy2x = 1600;
-enemy2.style.left = enemy2x + "px";
+let enemy2X = 1600;
+enemy2.style.left = enemy2X + "px";
 setInterval(() => {
   enemy2X -= 14;
   if (enemy2X < -70) {
@@ -138,7 +138,8 @@ function resetGame() {
   enemy.style.left = enemyX + "px";
   enemy1X = 2500;
   enemy1.style.left = enemy1X + "px";
-
+  enemy2X = 409;
+  enemy2.style.left = enemy2X + "px";
   // Optionally reset score
   score = 0;
   updateScoreboard();
