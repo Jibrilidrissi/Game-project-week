@@ -2,6 +2,7 @@
 const character = document.getElementById("character");
 const enemy = document.getElementById("enemy");
 const enemy1 = document.getElementById("enemy1");
+const enemy2 = document.getElementById("enemy2");
 const scoreboard = document.getElementById("scoreboard");
 
 // Enemy setup
@@ -21,13 +22,23 @@ let enemy1X = 2500;
 enemy1.style.left = enemy1X + "px";
 
 setInterval(() => {
-  enemy1X -= 12;
+  enemy1X -= 14;
   if (enemy1X < -500) {
     enemy1X = 1500;
   }
   enemy1.style.left = enemy1X + "px";
   checkCollision();
 }, 20);
+
+setInterval(() => {
+  enemy2X -= 14;
+  if (enemy2X < -700) {
+    enemy2X = 20;
+  }
+  enemy2.style.left = enemy2X + "px";
+  checkCollision();
+}, 20);
+
 
 // Jump logic
 let isJumping = false;
@@ -72,7 +83,7 @@ function jump() {
 
 // Score + Highscore
 let score = 0;
-let highscore = localStorage.getItem("Highscore") || 0;
+let highscore = localStorage.getItem("Highscore") || 1;
 
 function updateScoreboard() {
   scoreboard.textContent = `Score: ${score} Highscore: ${highscore}`;
