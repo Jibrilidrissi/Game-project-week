@@ -59,6 +59,21 @@ body {
     left: 500px;
 }
 
+ button { 
+    position: absolute;
+    left: 42px;
+    top: 1px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: rgb(14, 60, 241);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 3px;
+    
+}
 #scoreboard {
 
     text-align: center;
