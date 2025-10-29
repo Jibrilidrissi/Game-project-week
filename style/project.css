@@ -55,11 +55,11 @@ body {
     width: 75px;
     height: 65px;
     position: absolute;
-    top: 409px;
+    top: 499px;
     left: 500px;
 }
 
- button { 
+#homebutton { 
     position: absolute;
     left: 42px;
     top: 1px;
@@ -67,13 +67,18 @@ body {
     padding: 10px 20px;
     font-size: 1rem;
     background: rgb(14, 60, 241);
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 6px;
     cursor: pointer;
     margin: 3px;
-    
+    box-shadow: 7px 3px 3px rgb(0, 0, 0);
 }
+
+#homebutton:hover {
+  background-color: #000000;
+}
+    
 #scoreboard {
 
     text-align: center;

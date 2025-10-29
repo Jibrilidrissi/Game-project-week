@@ -12,7 +12,7 @@ enemy.style.left = enemyX + "px";
 setInterval(() => {
   enemyX -= 14;
   if (enemyX < -300) {
-    enemyX = 1700;
+    enemyX = 1800;
   }
   enemy.style.left = enemyX + "px";
   checkCollision();
@@ -24,8 +24,8 @@ enemy1.style.left = enemy1X + "px";
 
 setInterval(() => {
   enemy1X -= 14;
-  if (enemy1X < -500) {
-    enemy1X = 1500;
+  if (enemy1X < -300) {
+    enemy1X = 1800;
   }
   enemy1.style.left = enemy1X + "px";
   checkCollision();
@@ -37,8 +37,8 @@ enemy2.style.left = enemy2X + "px";
 
 setInterval(() => {
   enemy2X -= 14;
-  if (enemy2X < -700) {
-    enemy2X = 1500;
+  if (enemy2X < -300) {
+    enemy2X = 1800;
   }
   enemy2.style.left = enemy2X + "px";
   checkCollision();
