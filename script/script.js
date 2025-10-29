@@ -49,7 +49,7 @@ setInterval(() => {
 let isJumping = false;
 let jumpHeight = 190;
 let jumpSpeed = 5;
-let gravity = 3;
+let gravity = 4;
 let groundY = 459;
 
 document.addEventListener("keydown", event => {
@@ -85,6 +85,12 @@ function jump() {
     }
   }, jumpSpeed);
 }
+
+
+
+
+
+
 
 // Score + Highscore
 let score = 0;
